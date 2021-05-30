@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torta</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1200" height="800" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //plamenovi svecica
+            for (i = 0; i < 6; i++) {
+                ctx.beginPath();
+                ctx.moveTo(200 + i * 160, 40);
+                ctx.lineTo(240 + i * 160, 80);
+                ctx.lineTo(240 + i * 160, 120);
+                ctx.lineTo(200 + i * 160, 160);
+                ctx.lineTo(160 + i * 160, 120);
+                ctx.lineTo(160 + i * 160, 80);
+                ctx.lineTo(200 + i * 160, 40);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+            }
+
+            //svecice
+            for (i = 0; i < 6; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "thistle";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(160 + i * 160, 160, 80, 120);
+                ctx.strokeRect(160 + i * 160, 160, 80, 120);
+            }
+
+            //prvi sprat torte
+            ctx.beginPath();
+            ctx.fillStyle = "#ffe6cc";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(160, 280, 880, 120);
+            ctx.strokeRect(160, 280, 880, 120);
+
+            //ukras na prvom spratu
+            ctx.beginPath();
+            ctx.moveTo(120, 280);
+            ctx.lineTo(1080, 280);
+            ctx.lineTo(1120, 320);
+            ctx.lineTo(1080, 360);
+            ctx.lineTo(1040, 320);
+            ctx.lineTo(1000, 360);
+            ctx.lineTo(960, 360);
+            ctx.lineTo(920, 320);
+            ctx.lineTo(880, 320);
+            ctx.lineTo(840, 360);
+            ctx.lineTo(800, 360);
+            ctx.lineTo(760, 320);
+            ctx.lineTo(680, 320);
+            ctx.lineTo(640, 360);
+            ctx.lineTo(560, 360);
+            ctx.lineTo(520, 320);
+            ctx.lineTo(440, 320);
+            ctx.lineTo(400, 360);
+            ctx.lineTo(360, 360);
+            ctx.lineTo(320, 320);
+            ctx.lineTo(280, 320);
+            ctx.lineTo(240, 360);
+            ctx.lineTo(200, 360);
+            ctx.lineTo(160, 320);
+            ctx.lineTo(120, 360);
+            ctx.lineTo(80, 320);
+            ctx.lineTo(120, 280);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#ffccf2";
+            ctx.fill();
+
+            //srednji sprat torte
+            ctx.beginPath();
+            ctx.fillStyle = "thistle";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(160, 400, 880, 120);
+            ctx.strokeRect(160, 400, 880, 120);
+
+            //kockice na srednjem spratu
+            for (i = 0; i < 6; i++) {
+                ctx.beginPath();
+                ctx.moveTo(200 + i * 160, 440);
+                ctx.lineTo(220 + i * 160, 460);
+                ctx.lineTo(200 + i * 160, 480);
+                ctx.lineTo(180 + i * 160, 460);
+                ctx.lineTo(200 + i * 160, 440);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#ffe6cc";
+                ctx.fill();
+            }
+
+            //rombovi na srednjem spratu
+            for (i = 0; i < 5; i++) {
+                ctx.beginPath();
+                ctx.moveTo(280 + i * 160, 400);
+                ctx.lineTo(320 + i * 160, 440);
+                ctx.lineTo(320 + i * 160, 480);
+                ctx.lineTo(280 + i * 160, 520);
+                ctx.lineTo(240 + i * 160, 480);
+                ctx.lineTo(240 + i * 160, 440);
+                ctx.lineTo(280 + i * 160, 400);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#ffccf2";
+                ctx.fill();
+            }
+
+            //krugovi na srednjem spratu
+            for (i = 0; i < 5; i++) {
+                ctx.beginPath();
+                ctx.arc(280 + i * 160, 460, 20, 0, Math.PI * 2, true);
+                ctx.fillStyle = "#ffffe6";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+            }
+
+            //donji sprat torte
+            ctx.beginPath();
+            ctx.fillStyle = "#ffe6cc";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(160, 520, 880, 120);
+            ctx.strokeRect(160, 520, 880, 120);
+
+            //linija na donjem spratu torte
+            ctx.beginPath();
+            ctx.fillStyle = "thistle";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(160, 560, 880, 40);
+            ctx.strokeRect(160, 560, 880, 40);
+
+            //krugovi na donjem spratu
+            for (i = 0; i < 11; i++) {
+                ctx.beginPath();
+                ctx.arc(200 + i * 80, 580, 20, 0, Math.PI * 2, true);
+                ctx.fillStyle = "#ffffe6";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+            }
+
+            //postolje torte
+            ctx.beginPath();
+            ctx.moveTo(80, 640);
+            ctx.lineTo(1120, 640);
+            ctx.lineTo(1040, 720);
+            ctx.lineTo(160, 720);
+            ctx.lineTo(80, 640);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#ecb3ff";
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.moveTo(160, 720);
+            ctx.lineTo(1040, 720);
+            ctx.arcTo(1040, 760, 1000, 760, 20)
+            ctx.lineTo(200, 760);
+            ctx.arcTo(160, 760, 160, 720, 20)
+            ctx.lineTo(160, 720);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#ecb3ff";
+            ctx.fill();
+
+
+        }
+    }
+</script>
+
+</html>

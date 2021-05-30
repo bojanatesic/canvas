@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrica</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="500" height="460" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //prva tri reda
+            for (i = 0; i < 12; i++) {
+                for (j = 0; j < 3; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "red";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(20 + i * 40, 20 + j * 40, 20, 20);
+                    ctx.strokeRect(20 + i * 40, 20 + j * 40, 20, 20);
+                }
+            }
+
+            //cetvrti red
+            for (k = 0; k < 12; k++) {
+                ctx.beginPath();
+                ctx.arc(30 + k * 40, 150, 10, 0, Math.PI * 2, true);
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+            }
+
+            //peti red
+            for (l = 0; l < 8; l++) {
+                ctx.beginPath();
+                ctx.fillStyle = "lime";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(20 + l * 60, 180, 40, 40);
+                ctx.strokeRect(20 + l * 60, 180, 40, 40);
+            }
+
+            //sesti red
+            for (k = 0; k < 8; k++) {
+                ctx.beginPath();
+                ctx.arc(40 + k * 60, 260, 20, 0, Math.PI * 2, true);
+                ctx.fillStyle = "magenta";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+            }
+
+            //sedmi red
+            for (i = 0; i < 8; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "cyan";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(20 + i * 60, 300, 40, 80);
+                ctx.strokeRect(20 + i * 60, 300, 40, 80);
+            }
+
+            //poslednji red kocka
+            for (i = 0; i < 4; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "gold";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(20 + i * 120, 400, 40, 40);
+                ctx.strokeRect(20 + i * 120, 400, 40, 40);
+            }
+
+            //poslednji red krug
+            for (k = 0; k < 4; k++) {
+                ctx.beginPath();
+                ctx.arc(100 + k * 120, 420, 20, 0, Math.PI * 2, true);
+                ctx.fillStyle = "silver";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+            }
+        }
+    }
+</script>
+
+</html>

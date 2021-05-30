@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krug i lukovi</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="500" height="500" style="border: 2px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+
+            // centralni krug
+            ctx.beginPath();
+            ctx.arc(250, 250, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // gornji krug
+            ctx.beginPath();
+            ctx.arc(250, 0, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // donji krug
+            ctx.beginPath();
+            ctx.arc(250, 500, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth =2;
+            ctx.stroke();
+
+            // pitaj boga koji krug
+            ctx.beginPath();
+            ctx.arc(466.5, 375, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // pitaj boga koji krug
+            ctx.beginPath();
+            ctx.arc(33.5, 375, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // pitaj boga koji krug
+            ctx.beginPath();
+            ctx.arc(33.5, 125, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // pitaj boga koji krug
+            ctx.beginPath();
+            ctx.arc(466.5, 125, 250, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "#f30671";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+        }
+    }
+</script>
+
+</html>

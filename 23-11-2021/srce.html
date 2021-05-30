@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srce</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="500" height="500" style="border: 5px solid #ab13bf;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //pozadina
+            var linGrad = ctx.createLinearGradient(0, 500, 500, 500);
+            linGrad.addColorStop(0.0, "#ab13bf");
+            linGrad.addColorStop(1.0, "#b380ba");
+            ctx.fillStyle = linGrad;
+            ctx.beginPath();
+            ctx.fillRect(0, 0, 500, 500);
+            ctx.fill();
+
+            //srce
+            ctx.beginPath();
+            ctx.moveTo(250, 125);
+            ctx.bezierCurveTo(275, 75, 300, 50, 350, 50);
+            ctx.bezierCurveTo(400, 50, 450, 75, 450, 175);
+            ctx.bezierCurveTo(450, 275, 375, 400, 250, 450);
+            ctx.bezierCurveTo(125, 400, 50, 275, 50, 175);
+            ctx.bezierCurveTo(50, 75, 100, 50, 150, 50);
+            ctx.bezierCurveTo(200, 50, 225, 75, 250, 125);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.lineWidth = 4;
+            ctx.fillStyle = "#f26fd8";
+            ctx.fill();
+            ctx.strokeStyle = "#f26fd8";
+            ctx.stroke();
+        }
+    }
+</script>
+
+</html>

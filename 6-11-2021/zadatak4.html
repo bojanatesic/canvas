@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 4</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="800" height="800" style="border: 2px solid black;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //centralni zuti krug
+            ctx.beginPath();
+            ctx.arc(400, 400, 300, 0, Math.PI * 2, true);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //gornji crveni krug
+            ctx.beginPath();
+            ctx.arc(400, 200, 100, 0, Math.PI * 2, true);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //donji plavi krug
+            ctx.beginPath();
+            ctx.arc(400, 600, 100, 0, Math.PI * 2, true);
+            ctx.fillStyle = "blue";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //centralni zeleni krug
+            ctx.beginPath();
+            ctx.arc(400, 400, 100, 0, Math.PI * 2, true);
+            ctx.fillStyle = "green";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //centralni crni veci krug
+            ctx.beginPath();
+            ctx.arc(400, 400, 75, 0, Math.PI * 2, true);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //centralni beli krug
+            ctx.beginPath();
+            ctx.arc(400, 400, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "white";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //centralni crni manji krug
+            ctx.beginPath();
+            ctx.arc(400, 400, 25, 0, Math.PI * 2, true);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //levi plavi gornji krug
+            ctx.beginPath();
+            ctx.arc(250, 250, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "cyan";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //levi plavi srednji krug
+            ctx.beginPath();
+            ctx.arc(250, 400, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "cyan";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //levi donji plavi krug
+            ctx.beginPath();
+            ctx.arc(250, 550, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "cyan";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //desni ljubicasti gornji krug
+            ctx.beginPath();
+            ctx.arc(550, 250, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "magenta";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //desni ljubicasti srednji krug
+            ctx.beginPath();
+            ctx.arc(550, 400, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "magenta";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //desni donji ljubicasti krug
+            ctx.beginPath();
+            ctx.arc(550, 550, 50, 0, Math.PI * 2, true);
+            ctx.fillStyle = "magenta";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //gornji narandzasti krug
+            ctx.beginPath();
+            ctx.arc(400, 125, 75, 0, Math.PI * 2, true);
+            ctx.fillStyle = "orange";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //desni narandzasti krug
+            ctx.beginPath();
+            ctx.arc(675, 400, 75, 0, Math.PI * 2, true);
+            ctx.fillStyle = "orange";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //donji narandzasti krug
+            ctx.beginPath();
+            ctx.arc(400, 675, 75, 0, Math.PI * 2, true);
+            ctx.fillStyle = "orange";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            //levi narandzasti krug
+            ctx.beginPath();
+            ctx.arc(125, 400, 75, 0, Math.PI * 2, true);
+            ctx.fillStyle = "orange";
+            ctx.fill();
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+    }
+</script>
+
+</html>

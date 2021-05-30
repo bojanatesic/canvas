@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 34</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="800" height="800" style="border: 5px solid #ab13bf;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //crveni kvadrat
+            ctx.beginPath();
+            ctx.moveTo(50, 400);
+            ctx.lineTo(400, 50);
+            ctx.lineTo(750, 400);
+            ctx.lineTo(400, 750);
+            ctx.lineTo(50, 400);
+            ctx.fillStyle = "#c21919";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //plavi kvadrat
+            ctx.beginPath();
+            ctx.fillStyle = "blue";
+            ctx.fillRect(200, 200, 400, 400);
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //zelene strelice
+            ctx.beginPath();
+            ctx.moveTo(300, 250);
+            ctx.lineTo(400, 150);
+            ctx.lineTo(500, 250);
+            ctx.lineTo(450, 300);
+            ctx.lineTo(400, 250);
+            ctx.lineTo(350, 300);
+            ctx.lineTo(300, 250);
+
+            ctx.moveTo(550, 300);
+            ctx.lineTo(650, 400);
+            ctx.lineTo(550, 500);
+            ctx.lineTo(500, 450);
+            ctx.lineTo(550, 400);
+            ctx.lineTo(500, 350);
+            ctx.lineTo(550, 300);
+
+            ctx.moveTo(450, 500);
+            ctx.lineTo(500, 550);
+            ctx.lineTo(400, 650);
+            ctx.lineTo(300, 550);
+            ctx.lineTo(350, 500);
+            ctx.lineTo(400, 550);
+            ctx.lineTo(450, 500);
+
+            ctx.moveTo(250, 500);
+            ctx.lineTo(150, 400);
+            ctx.lineTo(250, 300);
+            ctx.lineTo(300, 350);
+            ctx.lineTo(250, 400);
+            ctx.lineTo(300, 450);
+            ctx.lineTo(250, 500);
+
+            ctx.fillStyle = "green";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //pink krst
+            ctx.beginPath();
+            ctx.moveTo(350, 300);
+            ctx.lineTo(400, 250);
+            ctx.lineTo(450, 300);
+            ctx.lineTo(450, 350);
+            ctx.lineTo(500, 350);
+            ctx.lineTo(550, 400);
+            ctx.lineTo(500, 450);
+            ctx.lineTo(450, 450);
+            ctx.lineTo(450, 500);
+            ctx.lineTo(400, 550);
+            ctx.lineTo(350, 500);
+            ctx.lineTo(350, 450);
+            ctx.lineTo(300, 450);
+            ctx.lineTo(250, 400);
+            ctx.lineTo(300, 350);
+            ctx.lineTo(350, 350);
+            ctx.lineTo(350, 300);
+
+            ctx.fillStyle = "pink";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //zuti krug
+            ctx.beginPath();
+            ctx.arc(400,400,50,0,Math.PI * 2, true)
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+        }
+    }
+</script>
+
+</html>

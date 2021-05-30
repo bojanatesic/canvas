@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblacic</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1300" height="1100" style="border: 5px solid #ab13bf;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            ctx.beginPath();
+            ctx.moveTo(100, 400);
+            ctx.quadraticCurveTo(100, 100, 500, 100);
+            ctx.lineTo(800, 100);
+            ctx.quadraticCurveTo(1200, 100, 1200, 400);
+            ctx.quadraticCurveTo(1200, 700, 800, 700);
+            ctx.lineTo(700, 700);
+            ctx.quadraticCurveTo(700, 1000, 300, 1000);
+            ctx.quadraticCurveTo(500, 1000, 500, 700);
+            ctx.quadraticCurveTo(100, 700, 100, 400);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.lineWidth = 4;
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+        }
+    }
+</script>
+
+</html>

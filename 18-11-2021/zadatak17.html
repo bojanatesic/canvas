@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadatak 17</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="920" height="730" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            for (i = 0; i < 4; i++) {
+                for (j = 0; j < 5; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(20 + i * 240, 40 + j * 120);
+                    ctx.lineTo(100 + i * 240, 80 + j * 120);
+                    ctx.lineTo(100 + i * 240, 160 + j * 120);
+                    ctx.lineTo(60 + i * 240, 140 + j * 120);
+                    ctx.lineTo(60 + i * 240, 100 + j * 120);
+                    ctx.lineTo(20 + i * 240, 80 + j * 120);
+                    ctx.lineTo(20 + i * 240, 40 + j * 120);
+                    ctx.fillStyle = "#223a61";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(100 + i * 240, 80 + j * 120);
+                    ctx.lineTo(180 + i * 240, 40 + j * 120);
+                    ctx.lineTo(180 + i * 240, 80 + j * 120);
+                    ctx.lineTo(140 + i * 240, 100 + j * 120);
+                    ctx.lineTo(140 + i * 240, 140 + j * 120);
+                    ctx.lineTo(100 + i * 240, 160 + j * 120);
+                    ctx.lineTo(100 + i * 240, 80 + j * 120);
+                    ctx.fillStyle = "#385e9c";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(20 + i * 240, 40 + j * 120);
+                    ctx.lineTo(60 + i * 240, 20 + j * 120);
+                    ctx.lineTo(100 + i * 240, 40 + j * 120);
+                    ctx.lineTo(140 + i * 240, 20 + j * 120);
+                    ctx.lineTo(180 + i * 240, 40 + j * 120);
+                    ctx.lineTo(100 + i * 240, 80 + j * 120);
+                    ctx.lineTo(20 + i * 240, 40 + j * 120);
+                    ctx.fillStyle = "#4f87e3";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                }
+            }
+
+            for (i = 0; i < 3; i++) {
+                for (j = 0; j < 5; j++) {
+                ctx.beginPath();
+                    ctx.moveTo(140 + i * 240, 100 + j * 120);
+                    ctx.lineTo(220 + i * 240, 140 + j * 120);
+                    ctx.lineTo(220 + i * 240, 220 + j * 120);
+                    ctx.lineTo(180 + i * 240, 200 + j * 120);
+                    ctx.lineTo(180 + i * 240, 160 + j * 120);
+                    ctx.lineTo(140 + i * 240, 140 + j * 120);
+                    ctx.lineTo(140 + i * 240, 100 + j * 120);
+                    ctx.fillStyle = "#4a1f59";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(220 + i * 240, 140 + j * 120);
+                    ctx.lineTo(300 + i * 240, 100 + j * 120);
+                    ctx.lineTo(300 + i * 240, 140 + j * 120);
+                    ctx.lineTo(260 + i * 240, 160 + j * 120);
+                    ctx.lineTo(260 + i * 240, 200 + j * 120);
+                    ctx.lineTo(220 + i * 240, 220 + j * 120);
+                    ctx.lineTo(220 + i * 240, 140 + j * 120);
+                    ctx.fillStyle = "#7b3494";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(140 + i * 240, 100 + j * 120);
+                    ctx.lineTo(180 + i * 240, 80 + j * 120);
+                    ctx.lineTo(220 + i * 240, 100 + j * 120);
+                    ctx.lineTo(260 + i * 240, 80 + j * 120);
+                    ctx.lineTo(300 + i * 240, 100 + j * 120);
+                    ctx.lineTo(220 + i * 240, 140 + j * 120);
+                    ctx.lineTo(140 + i * 240, 100 + j * 120);
+                    ctx.fillStyle = "#b24bd6";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                }
+            }
+
+        }
+    }
+</script>
+
+</html>

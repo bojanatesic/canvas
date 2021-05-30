@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradijent</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1240" height="840" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+
+            var linGrad = ctx.createLinearGradient (20,840,1240,840);
+            linGrad.addColorStop (0.2, "red");
+            linGrad.addColorStop (0.4, "blue");
+            linGrad.addColorStop (0.6, "green");
+            linGrad.addColorStop (0.8, "yellow");
+            
+            for (i = 0; i < 6; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(20 + i * 200, 60 + j * 200);
+                    ctx.arcTo(60 + i * 200, 60 + j * 200,60+i*200,20+j*200,40);
+                    ctx.lineTo(100 + i * 200, 20 + j * 200);
+                    ctx.lineTo(100 + i * 200, 60 + j * 200);
+                    ctx.arcTo(100 + i * 200, 80 + j * 200,120+i*200,80+j*200,20);
+                    ctx.arcTo(140 + i * 200, 80 + j * 200,140+i*200,60+j*200,20);
+                    ctx.lineTo(140 + i * 200, 20 + j * 200);
+                    ctx.lineTo(180 + i * 200, 20 + j * 200);
+                    ctx.arcTo(180 + i * 200, 60 + j * 200,220+i*200,60+j*200,40);
+                    ctx.lineTo(220 + i * 200, 100 + j * 200);
+                    ctx.lineTo(180 + i * 200, 100 + j * 200);
+                    ctx.arcTo(160 + i * 200, 100 + j * 200,160+i*200,120+j*200,20);
+                    ctx.arcTo(160 + i * 200, 140 + j * 200,180+i*200,140+j*200,20);
+                    ctx.lineTo(220 + i * 200, 140 + j * 200);
+                    ctx.lineTo(220 + i * 200, 180 + j * 200);
+                    ctx.arcTo(180 + i * 200, 180 + j * 200,180+i*200,220+j*200,40);
+                    ctx.lineTo(140 + i * 200, 220 + j * 200);
+                    ctx.lineTo(140 + i * 200, 180 + j * 200);
+                    ctx.arcTo(140 + i * 200, 160 + j * 200,120+i*200,160+j*200,20);
+                    ctx.arcTo(100 + i * 200, 160 + j * 200,100+i*200,180+j*200,20);
+                    ctx.lineTo(100 + i * 200, 220 + j * 200);
+                    ctx.lineTo(60 + i * 200, 220 + j * 200);
+                    ctx.arcTo(60 + i * 200, 180 + j * 200,20+i*200,180+j*200,40);
+                    ctx.lineTo(20 + i * 200, 140 + j * 200);
+                    ctx.lineTo(60 + i * 200, 140 + j * 200);
+                    ctx.arcTo(80 + i * 200, 140 + j * 200,80+i*200,120+j*200,20);
+                    ctx.arcTo(80 + i * 200, 100 + j * 200,60+i*200,100+j*200,20);
+                    ctx.lineTo(20 + i * 200, 100 + j * 200);
+                    ctx.lineTo(20 + i * 200, 60 + j * 200);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle=linGrad;
+ctx.fill();
+                }
+            }
+            
+            
+            
+            
+        }
+    }
+</script>
+
+</html>

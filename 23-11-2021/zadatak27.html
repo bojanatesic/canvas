@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 27</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1020" height="760" style="border: 5px solid #ab13bf;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            for (i = 0; i < 4; i++) {
+                for (j = 0; j < 3; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(20 + i * 260, 0 + j * 260);
+                    ctx.lineTo(60 + i * 260, 0 + j * 260);
+                    ctx.lineTo(0 + i * 260, 60 + j * 260);
+                    ctx.lineTo(0 + i * 260, 20 + j * 260);
+                    ctx.lineTo(20 + i * 260, 20 + j * 260);
+                    ctx.lineTo(20 + i * 260, 0 + j * 260);
+                    ctx.moveTo(180 + i * 260, 0 + j * 260);
+                    ctx.lineTo(220 + i * 260, 0 + j * 260);
+                    ctx.lineTo(220 + i * 260, 20 + j * 260);
+                    ctx.lineTo(240 + i * 260, 20 + j * 260);
+                    ctx.lineTo(240 + i * 260, 60 + j * 260);
+                    ctx.lineTo(180 + i * 260, 0 + j * 260);
+                    ctx.moveTo(240 + i * 260, 180 + j * 260);
+                    ctx.lineTo(240 + i * 260, 220 + j * 260);
+                    ctx.lineTo(220 + i * 260, 220 + j * 260);
+                    ctx.lineTo(220 + i * 260, 240 + j * 260);
+                    ctx.lineTo(180 + i * 260, 240 + j * 260);
+                    ctx.lineTo(240 + i * 260, 180 + j * 260);
+                    ctx.moveTo(0 + i * 260, 180 + j * 260);
+                    ctx.lineTo(60 + i * 260, 240 + j * 260);
+                    ctx.lineTo(20 + i * 260, 240 + j * 260);
+                    ctx.lineTo(20 + i * 260, 220 + j * 260);
+                    ctx.lineTo(0 + i * 260, 220 + j * 260);
+                    ctx.lineTo(0 + i * 260, 180 + j * 260);
+
+                    ctx.moveTo(100 + i * 260, 0 + j * 260);
+                    ctx.lineTo(140 + i * 260, 0 + j * 260);
+                    ctx.lineTo(140 + i * 260, 20 + j * 260);
+                    ctx.lineTo(160 + i * 260, 20 + j * 260);
+                    ctx.lineTo(160 + i * 260, 40 + j * 260);
+                    ctx.lineTo(180 + i * 260, 40 + j * 260);
+                    ctx.lineTo(180 + i * 260, 60 + j * 260);
+                    ctx.lineTo(200 + i * 260, 60 + j * 260);
+                    ctx.lineTo(200 + i * 260, 80 + j * 260);
+                    ctx.lineTo(220 + i * 260, 80 + j * 260);
+                    ctx.lineTo(220 + i * 260, 100 + j * 260);
+                    ctx.lineTo(240 + i * 260, 100 + j * 260);
+                    ctx.lineTo(240 + i * 260, 140 + j * 260);
+                    ctx.lineTo(220 + i * 260, 140 + j * 260);
+                    ctx.lineTo(220 + i * 260, 160 + j * 260);
+                    ctx.lineTo(200 + i * 260, 160 + j * 260);
+                    ctx.lineTo(200 + i * 260, 180 + j * 260);
+                    ctx.lineTo(180 + i * 260, 180 + j * 260);
+                    ctx.lineTo(180 + i * 260, 200 + j * 260);
+                    ctx.lineTo(160 + i * 260, 200 + j * 260);
+                    ctx.lineTo(160 + i * 260, 220 + j * 260);
+                    ctx.lineTo(140 + i * 260, 220 + j * 260);
+                    ctx.lineTo(140 + i * 260, 240 + j * 260);
+                    ctx.lineTo(100 + i * 260, 240 + j * 260);
+                    ctx.lineTo(100 + i * 260, 220 + j * 260);
+                    ctx.lineTo(80 + i * 260, 220 + j * 260);
+                    ctx.lineTo(80 + i * 260, 200 + j * 260);
+                    ctx.lineTo(60 + i * 260, 200 + j * 260);
+                    ctx.lineTo(60 + i * 260, 180 + j * 260);
+                    ctx.lineTo(40 + i * 260, 180 + j * 260);
+                    ctx.lineTo(40 + i * 260, 160 + j * 260);
+                    ctx.lineTo(20 + i * 260, 160 + j * 260);
+                    ctx.lineTo(20 + i * 260, 140 + j * 260);
+                    ctx.lineTo(0 + i * 260, 140 + j * 260);
+                    ctx.lineTo(0 + i * 260, 120 + j * 260);
+                    ctx.lineTo(0 + i * 260, 100 + j * 260);
+                    ctx.lineTo(20 + i * 260, 100 + j * 260);
+                    ctx.lineTo(20 + i * 260, 80 + j * 260);
+                    ctx.lineTo(40 + i * 260, 80 + j * 260);
+                    ctx.lineTo(40 + i * 260, 60 + j * 260);
+                    ctx.lineTo(60 + i * 260, 60 + j * 260);
+                    ctx.lineTo(60 + i * 260, 40 + j * 260);
+                    ctx.lineTo(80 + i * 260, 40 + j * 260);
+                    ctx.lineTo(80 + i * 260, 20 + j * 260);
+                    ctx.lineTo(100 + i * 260, 20 + j * 260);
+                    ctx.lineTo(100 + i * 260, 0 + j * 260);
+                    ctx.fillStyle = "aqua";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+
+
+                    ctx.beginPath()
+                    ctx.moveTo(100 + i * 260, 40 + j * 260);
+                    ctx.lineTo(140 + i * 260, 40 + j * 260);
+                    ctx.lineTo(140 + i * 260, 60 + j * 260);
+                    ctx.lineTo(180 + i * 260, 100 + j * 260);
+                    ctx.lineTo(200 + i * 260, 100 + j * 260);
+                    ctx.lineTo(200 + i * 260, 140 + j * 260);
+                    ctx.lineTo(180 + i * 260, 140 + j * 260);
+                    ctx.lineTo(140 + i * 260, 180 + j * 260);
+                    ctx.lineTo(140 + i * 260, 200 + j * 260);
+                    ctx.lineTo(100 + i * 260, 200 + j * 260);
+                    ctx.lineTo(100 + i * 260, 180 + j * 260);
+                    ctx.lineTo(60 + i * 260, 140 + j * 260);
+                    ctx.lineTo(40 + i * 260, 140 + j * 260);
+                    ctx.lineTo(40 + i * 260, 100 + j * 260);
+                    ctx.lineTo(60 + i * 260, 100 + j * 260);
+                    ctx.lineTo(100 + i * 260, 60 + j * 260);
+                    ctx.lineTo(100 + i * 260, 40 + j * 260);
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                    
+                    ctx.beginPath()
+                    ctx.moveTo(120 + i * 260, 80 + j * 260);
+                    ctx.lineTo(160 + i * 260, 120 + j * 260);
+                    ctx.lineTo(120 + i * 260, 160 + j * 260);
+                    ctx.lineTo(80 + i * 260, 120 + j * 260);
+                    ctx.lineTo(120 + i * 260, 80 + j * 260);
+
+                    ctx.fillStyle = "aqua";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+
+                    ctx.beginPath()
+                    ctx.arc(120+i*260,120+j*260,10,0, Math.PI * 2, true);
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+
+
+                }
+            }
+
+           
+        }
+    }
+</script>
+
+</html>

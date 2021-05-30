@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akvadukt</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1350" height="940" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //pozadina
+            ctx.fillStyle = "#87cefa";
+            ctx.fillRect(0, 0, 1350, 940);
+
+            //prvi red cigli
+            for (i = 0; i < 23; i++) {
+                for (j = 0; j < 27; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "#995b09";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(-30 + i * 60, 60 + j * 30, 60, 15);
+                    ctx.strokeRect(-30 + i * 60, 60 + j * 30, 60, 15);
+                }
+            }
+
+            //drugi red cigli
+            for (i = 0; i < 23; i++) {
+                for (j = 0; j < 27; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "#995b09";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(0 + i * 60, 75 + j * 30, 60, 15);
+                    ctx.strokeRect(0 + i * 60, 75 + j * 30, 60, 15);
+                }
+            }
+
+            //gornji otvori
+            for (i = 0; i < 9; i++) {
+                ctx.beginPath();
+                ctx.moveTo(30 + i * 150, 135);
+                ctx.arcTo(30 + i * 150, 120, 60 + i * 150, 120, 30);
+                ctx.lineTo(90 + i * 150, 120);
+                ctx.arcTo(120 + i * 150, 120, 120 + i * 150, 150, 30);
+                ctx.lineTo(120 + i * 150, 210);
+                ctx.lineTo(30 + i * 150, 210);
+                ctx.lineTo(30 + i * 150, 135);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#87cefa";
+                ctx.fill();
+            }
+
+            //srednji otvori
+            for (i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.moveTo(60 + i * 450, 405);
+                ctx.arcTo(60 + i * 450, 270, 210 + i * 450, 270, 150);
+                ctx.lineTo(240 + i * 450, 270);
+                ctx.arcTo(390 + i * 450, 270, 390 + i * 450, 360, 150);
+                ctx.lineTo(390 + i * 450, 510);
+                ctx.lineTo(60 + i * 450, 510);
+                ctx.lineTo(60 + i * 450, 405);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#87cefa";
+                ctx.fill();
+            }
+
+            //donji otvori
+            for (i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.moveTo(60 + i * 450, 730);
+                ctx.arcTo(60 + i * 450, 600, 210 + i * 450, 600, 150);
+                ctx.lineTo(240 + i * 450, 600);
+                ctx.arcTo(390 + i * 450, 600, 390 + i * 450, 730, 150);
+                ctx.lineTo(390 + i * 450, 960);
+                ctx.lineTo(60 + i * 450, 960);
+                ctx.lineTo(60 + i * 450, 730);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#87cefa";
+                ctx.fill();
+            }
+
+            //gornji stubici
+            for (i = 0; i < 10; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "#9c0b0b";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(-45 + i * 150, 165, 90, 15);
+                ctx.strokeRect(-45 + i * 150, 165, 90, 15);
+                ctx.fillRect(-30 + i * 150, 180, 60, 30);
+                ctx.strokeRect(-30 + i * 150, 180, 60, 30);
+            }
+
+            //srednji stubici
+            for (i = 0; i < 4; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "#9c0b0b";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(-75 + i * 450, 435, 150, 15);
+                ctx.strokeRect(-75 + i * 450, 435, 150, 15);
+                ctx.fillRect(-60 + i * 450, 450, 120, 60);
+                ctx.strokeRect(-60 + i * 450, 450, 120, 60);
+            }
+
+            //donji stubici
+            for (i = 0; i < 4; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "#9c0b0b";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(-75 + i * 450, 870, 150, 90);
+                ctx.strokeRect(-75 + i * 450, 870, 150, 90);
+            }
+//staza za pesake
+ctx.beginPath();
+                ctx.fillStyle = "#09853b";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(0, 45, 1350, 15);
+                ctx.strokeRect(0, 45, 1350, 15);
+            
+                //put za automobile
+ctx.beginPath();
+                ctx.fillStyle = "#72787a";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(0, 210, 1350, 15);
+                ctx.strokeRect(0, 210, 1350, 15);
+
+//sine za vozove
+ctx.beginPath();
+                ctx.fillStyle = "#07475e";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(0, 510, 1350, 30);
+                ctx.strokeRect(0, 510, 1350, 30);
+        }
+    }
+</script>
+
+</html>

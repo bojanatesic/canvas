@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 3</title>
+</head>
+<body onload="draw();">
+    <canvas id="canvas" width="500" height="500"></canvas>
+</body>
+<script type="text/javascript">
+const draw =()=> {
+    var canvas = document.getElementById('canvas');
+    if (canvas.getContext) {
+        var ctx=canvas.getContext('2d');
+    }
+    //trougao
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(200, 25);
+    ctx.lineTo(25, 500);
+	ctx.lineTo(25, 25);
+	ctx.fillStyle = "lime";
+    ctx.fill();
+    ctx.lineWidth=2;
+ctx.strokeStyle = "black";
+ctx.stroke();
+
+    //pravougaonik
+    ctx.beginPath();
+	ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.lineWidth=2;
+    ctx.strokeStyle = "black";
+    ctx.fillRect(250,300,200,100);
+    ctx.strokeRect(250,300,200,100);
+
+
+
+}
+</script> 
+</html>

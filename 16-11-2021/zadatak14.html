@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 14</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1240" height="840" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //plavi trouglovi
+            for (i = 0; i < 6; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(20 + i * 200, 20 + j * 200);
+                    ctx.lineTo(100 + i * 200, 60 + j * 200);
+                    ctx.lineTo(60 + i * 200, 100 + j * 200);
+                    ctx.lineTo(20 + i * 200, 20 + j * 200);
+
+                    ctx.moveTo(140 + i * 200, 60 + j * 200);
+                    ctx.lineTo(220 + i * 200, 20 + j * 200);
+                    ctx.lineTo(180 + i * 200, 100 + j * 200);
+                    ctx.lineTo(140 + i * 200, 60 + j * 200);
+
+                    ctx.moveTo(180 + i * 200, 140 + j * 200);
+                    ctx.lineTo(220 + i * 200, 220 + j * 200);
+                    ctx.lineTo(140 + i * 200, 180 + j * 200);
+                    ctx.lineTo(180 + i * 200, 140 + j * 200);
+
+                    ctx.moveTo(100 + i * 200, 180 + j * 200);
+                    ctx.lineTo(20 + i * 200, 220 + j * 200);
+                    ctx.lineTo(60 + i * 200, 140 + j * 200);
+                    ctx.lineTo(100 + i * 200, 180 + j * 200);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "blue";
+                    ctx.fill();
+                }
+            }
+
+            //crveni rombovi
+            for (i = 0; i < 6; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(100 + i * 200, 60 + j * 200);
+                    ctx.lineTo(120 + i * 200, 20 + j * 200);
+                    ctx.lineTo(140 + i * 200, 60 + j * 200);
+                    ctx.lineTo(120 + i * 200, 100 + j * 200);
+                    ctx.lineTo(100 + i * 200, 60 + j * 200);
+
+                    ctx.moveTo(140 + i * 200, 120 + j * 200);
+                    ctx.lineTo(180 + i * 200, 100 + j * 200);
+                    ctx.lineTo(220 + i * 200, 120 + j * 200);
+                    ctx.lineTo(180 + i * 200, 140 + j * 200);
+                    ctx.lineTo(140 + i * 200, 120 + j * 200);
+
+                    ctx.moveTo(120 + i * 200, 140 + j * 200);
+                    ctx.lineTo(140 + i * 200, 180 + j * 200);
+                    ctx.lineTo(120 + i * 200, 220 + j * 200);
+                    ctx.lineTo(100 + i * 200, 180 + j * 200);
+                    ctx.lineTo(120 + i * 200, 140 + j * 200);
+
+                    ctx.moveTo(20 + i * 200, 120 + j * 200);
+                    ctx.lineTo(60 + i * 200, 100 + j * 200);
+                    ctx.lineTo(100 + i * 200, 120 + j * 200);
+                    ctx.lineTo(60 + i * 200, 140 + j * 200);
+                    ctx.lineTo(20 + i * 200, 120 + j * 200);
+
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "red";
+                    ctx.fill();
+                }
+            }
+
+            //zelene kockice
+            for (i = 0; i < 6; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(60 + i * 200, 100 + j * 200);
+                    ctx.lineTo(100 + i * 200, 60 + j * 200);
+                    ctx.lineTo(120 + i * 200, 100 + j * 200);
+                    ctx.lineTo(100 + i * 200, 120 + j * 200);
+                    ctx.lineTo(60 + i * 200, 100 + j * 200);
+
+                    ctx.moveTo(120 + i * 200, 100 + j * 200);
+                    ctx.lineTo(140 + i * 200, 60 + j * 200);
+                    ctx.lineTo(180 + i * 200, 100 + j * 200);
+                    ctx.lineTo(140 + i * 200, 120 + j * 200);
+                    ctx.lineTo(120 + i * 200, 100 + j * 200);
+
+                    ctx.moveTo(140 + i * 200, 120 + j * 200);
+                    ctx.lineTo(180 + i * 200, 140 + j * 200);
+                    ctx.lineTo(140 + i * 200, 180 + j * 200);
+                    ctx.lineTo(120 + i * 200, 140 + j * 200);
+                    ctx.lineTo(140 + i * 200, 120 + j * 200);
+
+                    ctx.moveTo(120 + i * 200, 140 + j * 200);
+                    ctx.lineTo(100 + i * 200, 180 + j * 200);
+                    ctx.lineTo(60 + i * 200, 140 + j * 200);
+                    ctx.lineTo(100 + i * 200, 120 + j * 200);
+                    ctx.lineTo(120 + i * 200, 140 + j * 200);
+
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "green";
+                    ctx.fill();
+                }
+            }
+
+
+        }
+    }
+</script>
+
+</html>

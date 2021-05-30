@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dvorac-zadatak 32</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1380" height="960" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //nebo
+            ctx.beginPath();
+            ctx.rect(0, 0, 1380, 400);
+            ctx.fillStyle = "#32dde3";
+            ctx.fill();
+            //trava
+            ctx.beginPath();
+            ctx.rect(0, 400, 1380, 960);
+            ctx.fillStyle = "#19a63e";
+            ctx.fill();
+
+            //zastava
+            ctx.beginPath();
+            ctx.moveTo(270, 450);
+            ctx.lineTo(270, 165);
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(270, 157.5, 7.5, 0, Math.PI * 2, true);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.rect(270, 165, 90, 60);
+            ctx.moveTo(360, 180);
+            ctx.lineTo(450, 180);
+            ctx.lineTo(420, 210);
+            ctx.lineTo(450, 240);
+            ctx.lineTo(360, 240);
+            ctx.lineTo(360, 180)
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //krov kule
+            ctx.beginPath();
+            ctx.moveTo(840, 90);
+            ctx.lineTo(750, 195);
+            ctx.lineTo(930, 195);
+            ctx.lineTo(840, 90);
+            ctx.moveTo(840, 90);
+            ctx.lineTo(780, 195);
+            ctx.moveTo(840, 90);
+            ctx.lineTo(810, 195);
+            ctx.moveTo(840, 90);
+            ctx.lineTo(840, 195)
+            ctx.moveTo(840, 90);
+            ctx.lineTo(870, 195)
+            ctx.moveTo(840, 90);
+            ctx.lineTo(900, 195)
+            ctx.moveTo(840, 90);
+            ctx.lineTo(930, 195)
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //kula
+            ctx.beginPath();
+            ctx.rect(750, 210, 180, 240);
+            ctx.fillStyle = "grey";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+
+            //ukras na kuli
+            ctx.beginPath();
+            ctx.moveTo(735, 195);
+            ctx.lineTo(945, 190);
+            ctx.lineTo(945, 270);
+            ctx.lineTo(930, 270);
+            ctx.lineTo(930, 210);
+            ctx.arcTo(915, 210, 915, 225, 15);
+            ctx.lineTo(915, 270);
+            ctx.lineTo(900, 270);
+            ctx.lineTo(900, 225);
+            ctx.arc(885, 225, 15, 0, Math.PI * 1, true);
+            ctx.lineTo(870, 270);
+            ctx.lineTo(855, 270);
+            ctx.lineTo(855, 225);
+            ctx.arc(840, 225, 15, 0, Math.PI * 1, true);
+            ctx.lineTo(825, 270);
+            ctx.lineTo(810, 270);
+            ctx.lineTo(810, 225);
+            ctx.arc(795, 225, 15, 0, Math.PI * 1, true);
+            ctx.lineTo(780, 270);
+            ctx.lineTo(765, 270);
+            ctx.lineTo(765, 225);
+            ctx.arcTo(765, 210, 750, 210, 15);
+            ctx.lineTo(750, 270);
+            ctx.lineTo(735, 270);
+            ctx.lineTo(735, 195);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //prozori na kuli
+            for (i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.moveTo(787.5 + i * 45, 360);
+                ctx.lineTo(802.5 + i * 45, 360);
+                ctx.lineTo(802.5 + i * 45, 300);
+                ctx.arc(795 + i * 45, 300, 7.5, 0, Math.PI * 1, true);
+                ctx.lineTo(787.5 + i * 45, 360)
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#87cefa";
+                ctx.fill();
+            }
+
+            //ciglice
+            for (i = 0; i < 10; i++) {
+                ctx.beginPath();
+                ctx.rect(390 + i * 60, 435, 30, 15);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#a66919";
+                ctx.fill();
+            }
+
+            for (i = 0; i < 10; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.rect(390 + i * 60, 450 + j * 30, 30, 30);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "#a66919";
+                    ctx.fill();
+                }
+            }
+
+            for (i = 0; i < 10; i++) {
+                ctx.beginPath();
+                ctx.rect(420 + i * 60, 555, 30, 15);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "#a66919";
+                ctx.fill();
+            }
+
+            for (i = 0; i < 10; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.rect(420 + i * 60, 435 + j * 30, 30, 30);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "#a66919";
+                    ctx.fill();
+                }
+            }
+
+            //uspravna lajsna levo
+            ctx.beginPath();
+            ctx.rect(360, 420, 30, 150);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#142899";
+            ctx.fill();
+
+
+
+
+            //dimnjaci
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.rect(450 + i * 360, 375, 90, 15);
+                ctx.rect(465 + i * 360, 390, 60, 45);
+                ctx.rect(450 + i * 360, 420, 90, 30);
+
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "black";
+                ctx.fill();
+            }
+
+            //ukras na leva strana dvirca
+            ctx.beginPath();
+            ctx.moveTo(180, 450);
+            ctx.lineTo(210, 450);
+            ctx.lineTo(210, 480);
+            ctx.lineTo(225, 480);
+            ctx.lineTo(225, 450);
+            ctx.lineTo(240, 450);
+            ctx.lineTo(240, 480);
+            ctx.lineTo(255, 480);
+            ctx.lineTo(255, 450);
+            ctx.lineTo(285, 450);
+            ctx.lineTo(285, 480);
+            ctx.lineTo(300, 480);
+            ctx.lineTo(300, 450);
+            ctx.lineTo(315, 450);
+            ctx.lineTo(315, 480);
+            ctx.lineTo(330, 480);
+            ctx.lineTo(330, 450);
+            ctx.lineTo(360, 450);
+            ctx.lineTo(360, 495);
+            ctx.lineTo(180, 495);
+            ctx.lineTo(180, 450);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //lajsne na levoj strani dvorca
+            ctx.beginPath();
+            ctx.moveTo(150, 510);
+            ctx.lineTo(180, 495);
+            ctx.lineTo(360, 495);
+            ctx.lineTo(360, 510);
+            ctx.lineTo(150, 510);
+            ctx.fillStyle = "lime";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(150, 510);
+            ctx.lineTo(360, 510);
+            ctx.lineTo(360, 525);
+            ctx.lineTo(165, 525);
+            ctx.arcTo(150, 525, 150, 510, 15);
+            ctx.fillStyle = "lime";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(165, 525);
+            ctx.lineTo(360, 525);
+            ctx.lineTo(360, 540);
+            ctx.lineTo(180, 540);
+            ctx.arcTo(165, 540, 165, 530, 15);
+            ctx.fillStyle = "lime";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //leva zgrada
+
+            ctx.beginPath();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.rect(180, 540, 180, 330);
+            ctx.fillStyle = "purple";
+            ctx.fill();
+
+            //prozor na levoj zgradi
+            ctx.beginPath();
+            ctx.moveTo(240, 660);
+            ctx.lineTo(300, 660);
+            ctx.lineTo(300, 600);
+            ctx.arc(270, 600, 30, 0, Math.PI * 1, true);
+            ctx.lineTo(240, 660);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#87cefa";
+            ctx.fill();
+
+            //lajsne na levoj zgradi
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.rect(165, 735 + i*120, 195, 15);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "black";
+                ctx.fill();
+            }
+
+            //vrata na levoj zgradi
+            ctx.beginPath();
+            ctx.moveTo(240, 870);
+            ctx.lineTo(300, 870);
+            ctx.lineTo(300, 795);
+            ctx.arc(270, 795, 30, 0, Math.PI * 1, true);
+            ctx.lineTo(240, 870);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "#87cefa";
+            ctx.fill();
+
+                        //lajsne na srednjoj zgradi
+                        for (i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.rect(360, 570 + i*120, 195, 15);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "black";
+                ctx.fill();
+            }
+
+        }
+    }
+</script>
+
+</html>

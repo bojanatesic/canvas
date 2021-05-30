@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadatak 20</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="1500" height="900" style="border: 5px solid plum;">
+    <img id="planina" src="fotografije/Planina_3200x1200.png">
+    <img id="drvo" src="fotografije/Drvo_500x357.png">
+    </canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        var imgPlanina=document.getElementById("planina")
+        var imgDrvo=document.getElementById("drvo")
+
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //trava
+            ctx.fillStyle = "#69eb67";
+            ctx.fill();
+            ctx.fillRect(0, 400, 1500, 500);
+
+            //nebo
+            ctx.fillStyle = "#74d9ed";
+            ctx.fill();
+            ctx.fillRect(0, 0, 1500, 400);
+//slika planine
+ctx.drawImage(imgPlanina,0,-600,3200,1000);
+//slika drveta
+ctx.drawImage(imgDrvo,0,100,500,400);
+            //krov
+            ctx.beginPath();
+            ctx.moveTo(250, 150);
+            ctx.lineTo(1250, 150);
+            ctx.lineTo(1300, 350);
+            ctx.lineTo(200, 350);
+            ctx.lineTo(250, 150);
+            ctx.fillStyle = "#c21919";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //leva strana kuce
+            ctx.beginPath();
+            ctx.moveTo(250, 350);
+            ctx.lineTo(450, 150);
+            ctx.lineTo(650, 350);
+            ctx.lineTo(650, 650);
+            ctx.lineTo(250, 650);
+            ctx.lineTo(250, 350);
+            ctx.fillStyle = "#c7a9a9";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //desna strana kuce
+            ctx.beginPath();
+            ctx.moveTo(650, 350);
+            ctx.lineTo(1250, 350);
+            ctx.lineTo(1250, 625);
+            ctx.lineTo(650, 625);
+            ctx.lineTo(650, 350);
+            ctx.fillStyle = "#c7a9a9";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //mala lajsna na levoj kuci
+            ctx.beginPath();
+            ctx.moveTo(200, 350);
+            ctx.lineTo(450, 100);
+            ctx.lineTo(700, 360);
+            ctx.lineTo(700, 370);
+            ctx.lineTo(450, 110);
+            ctx.lineTo(200, 360);
+            ctx.lineTo(200, 350);
+            ctx.fillStyle = "#704f0d";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+            //velika lajsna na levoj kuci
+            ctx.beginPath();
+            ctx.moveTo(200, 400);
+            ctx.lineTo(200, 360);
+            ctx.lineTo(450, 110);
+            ctx.lineTo(700, 370);
+            ctx.lineTo(700, 420);
+            ctx.lineTo(600, 420);
+            ctx.lineTo(650, 370);
+            ctx.lineTo(450, 160);
+            ctx.lineTo(250, 400);
+            ctx.lineTo(250, 450);
+            ctx.lineTo(200, 450);
+            ctx.lineTo(200, 400);
+            ctx.fillStyle = "#704f0d";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+
+//slika drveta
+ctx.drawImage(imgDrvo,1000,300,500,400);
+
+
+
+        }
+    }
+</script>
+
+</html>

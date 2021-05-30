@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 9</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="660" height="560" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "#f5e5c1";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(60 + i * 120, 40 + j * 120, 40, 80);
+                    ctx.strokeRect(60 + i * 120, 40 + j * 120, 40, 80);
+
+                }
+            }
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+
+                    ctx.beginPath();
+                    ctx.moveTo(40 + i * 120, 20 + j * 120);
+                    ctx.lineTo(60 + i * 120, 20 + j * 120);
+                    ctx.moveTo(100 + i * 120, 20 + j * 120);
+                    ctx.lineTo(120 + i * 120, 20 + j * 120);
+                    ctx.lineTo(120 + i * 120, 60 + j * 120);
+                    ctx.lineTo(140 + i * 120, 60 + j * 120);
+                    ctx.moveTo(120 + i * 120, 80 + j * 120);
+                    ctx.lineTo(100 + i * 120, 80 + j * 120);
+                    ctx.moveTo(140 + i * 120, 100 + j * 120);
+                    ctx.lineTo(120 + i * 120, 100 + j * 120);
+                    ctx.lineTo(120 + i * 120, 140 + j * 120);
+                    ctx.lineTo(100 + i * 120, 140 + j * 120);
+                    ctx.moveTo(60 + i * 120, 140 + j * 120);
+                    ctx.lineTo(40 + i * 120, 140 + j * 120);
+                    ctx.lineTo(40 + i * 120, 100 + j * 120);
+                    ctx.lineTo(20 + i * 120, 100 + j * 120);
+                    ctx.moveTo(40 + i * 120, 80 + j * 120);
+                    ctx.lineTo(60 + i * 120, 80 + j * 120);
+                    ctx.moveTo(20 + i * 120, 60 + j * 120);
+                    ctx.lineTo(40 + i * 120, 60 + j * 120);
+                    ctx.lineTo(40 + i * 120, 20 + j * 120);
+                    ctx.moveTo(60 + i * 120, 20 + j * 120);
+                    ctx.arcTo(80 + i * 120, 20 + j * 120, 80+i*120, 40+j*120,20);
+                    ctx.arcTo(80 + i * 120, 20 + j * 120, 100+i*120, 20+j*120,20);
+                    ctx.moveTo(140 + i * 120, 60 + j * 120);
+                    ctx.arcTo(140 + i * 120, 80 + j * 120, 120+i*120, 80+j*120,20);
+                    ctx.arcTo(140 + i * 120, 80 + j * 120, 140+i*120, 100+j*120,20);
+                    ctx.moveTo(100 + i * 120, 140 + j * 120);
+                    ctx.arcTo(80 + i * 120, 140 + j * 120, 80+i*120, 120+j*120,20);
+                    ctx.arcTo(80 + i * 120, 140 + j * 120, 60+i*120, 140+j*120,20);
+                    ctx.moveTo(20 + i * 120, 100 + j * 120);
+                    ctx.arcTo(20 + i * 120, 80 + j * 120, 40+i*120, 80+j*120,20);
+                    ctx.arcTo(20 + i * 120, 80 + j * 120, 20+i*120, 60+j*120,20);
+
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    // ctx.fillStyle = "yellow";
+                    // ctx.fill();
+
+
+                }
+            }
+
+        }
+    }
+</script>
+
+</html>

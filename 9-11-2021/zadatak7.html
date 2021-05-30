@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kucica</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="810" height="720" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //krov srednje kuce
+            ctx.beginPath();
+            ctx.moveTo(420, 30);
+            ctx.lineTo(510, 120);
+            ctx.lineTo(330, 120);
+            ctx.lineTo(420, 30);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.strokeStyle = "black";
+            ctx.lineWidht = 2;
+            ctx.stroke();
+            ctx.fillStyle = "red";
+            ctx.fill();
+
+            //lajsna srednje kuce
+            for (i = 0; i < 4; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "magenta";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(315, 120 + i * 120, 210, 15);
+                ctx.strokeRect(315, 120 + i * 120, 210, 15);
+            }
+
+            //srednja kuca
+            for (i = 0; i < 4; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "#6054";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(330, 135 + i * 120, 180, 120);
+                ctx.strokeRect(330, 135 + i * 120, 180, 120);
+            }
+
+            //okvir gornjeg prozora srednje kuce
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(375, 150, 90, 75);
+            ctx.strokeRect(375, 150, 90, 75);
+
+            //gornji prozor srednje kuce
+            for (l = 0; l < 2; l++) {
+                ctx.beginPath();
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(390 + l * 45, 165, 15, 45);
+                ctx.strokeRect(390 + l * 45, 165, 15, 45);
+            }
+
+            //srednji prozor srednje kuce
+            ctx.beginPath();
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.lineWidht = 2;
+            ctx.fillRect(390, 270, 60, 75);
+            ctx.strokeRect(390, 270, 60, 75);
+            ctx.moveTo(390, 270);
+            ctx.lineTo(450, 345);
+            ctx.moveTo(450, 270);
+            ctx.lineTo(390, 345);
+            ctx.strokeStyle = "black";
+            ctx.stroke(); 9
+
+            //donji prozor srednje kuce
+            ctx.beginPath();
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(390, 390, 60, 75);
+            ctx.strokeRect(390, 390, 60, 75);
+            for (l = 0; l < 2; l++) {
+                ctx.beginPath();
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(412.5, 405 + l * 30, 15, 15);
+                ctx.strokeRect(412.5, 405 + l * 30, 15, 15);
+            }
+
+            //vrata
+            for (l = 0; l < 6; l++) {
+                ctx.beginPath();
+                ctx.fillStyle = "grey";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(375 + l * 15, 510, 15, 120);
+                ctx.strokeRect(375 + l * 15, 510, 15, 120);
+            }
+
+            //krovovi leve i desne kuce
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.moveTo(240 + i * 360, 150);
+                ctx.lineTo(360 + i * 360, 270);
+                ctx.lineTo(120 + i * 360, 270);
+                ctx.lineTo(240 + i * 360, 150);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "red";
+                ctx.fill();
+            }
+
+            //lajsne leve i desne kuce
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "lime";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(105 + i * 360, 270, 270, 15);
+                ctx.strokeRect(105 + i * 360, 270, 270, 15);
+            }
+            //leva i desna kuca
+            for (i = 0; i < 2; i++) {
+                for (j = 0; j < 2; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "pink";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(120 + i * 360, 285 + j * 165, 240, 165);
+                    ctx.strokeRect(120 + i * 360, 285 + j * 165, 240, 165);
+                }
+            }
+            //srednje lajsne
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "lime";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(120 + i * 360, 435, 240, 15);
+                ctx.strokeRect(120 + i * 360, 435, 240, 15);
+            }
+
+            //kruzici na levoj kuci
+            for (i = 0; i < 7; i++) {
+                for (j = 0; j < 5; j++) {
+                    ctx.beginPath();
+                    ctx.arc(150 + i * 30, 300 + j * 30, 7.5, 0, Math.PI * 2, true);
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                }
+            }
+
+            //ukrasi na desnoj kuci
+            for (i = 0; i < 4; i++) {
+                for (j = 0; j < 2; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(510 + i * 60, 315 + j * 60);
+                    ctx.lineTo(525 + i * 60, 330 + j * 60);
+                    ctx.lineTo(510 + i * 60, 345 + j * 60);
+                    ctx.lineTo(495 + i * 60, 330 + j * 60);
+                    ctx.lineTo(510 + i * 60, 315 + j * 60);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                }
+            }
+
+            //okviri na prozorima leve donje kuce
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "black";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(150 + i * 105, 480, 75, 105);
+                ctx.strokeRect(150 + i * 105, 480, 75, 105);
+            }
+            for (i = 0; i < 2; i++) {
+                for (j = 0; j < 2; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(165 + i * 30, 495 + j * 45, 15, 30);
+                    ctx.strokeRect(165 + i * 30, 495 + j * 45, 15, 30);
+                    ctx.fillRect(270 + i * 30, 495 + j * 45, 15, 30);
+                    ctx.strokeRect(270 + i * 30, 495 + j * 45, 15, 30);
+                }
+            }
+
+            //okviri na prozorima desne donje kuce
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "black";
+                ctx.fill();
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.fillRect(510 + i * 105, 480, 75, 105);
+                ctx.strokeRect(510 + i * 105, 480, 75, 105);
+            }
+            for (i = 0; i < 2; i++) {
+                for (j = 0; j < 2; j++) {
+                    ctx.beginPath();
+                    ctx.fillStyle = "yellow";
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.fillRect(525 + i * 30, 495 + j * 45, 15, 30);
+                    ctx.strokeRect(525 + i * 30, 495 + j * 45, 15, 30);
+                    ctx.fillRect(630 + i * 30, 495 + j * 45, 15, 30);
+                    ctx.strokeRect(630 + i * 30, 495 + j * 45, 15, 30);
+                }
+            }
+
+            //ograda
+            for (i = 0; i < 23; i++) {
+                ctx.beginPath();
+                ctx.moveTo(60 + i * 30, 615);
+                ctx.lineTo(75 + i * 30, 615);
+                ctx.lineTo(90 + i * 30, 600);
+                ctx.lineTo(90 + i * 30, 660);
+                ctx.lineTo(60 + i * 30, 660);
+                ctx.lineTo(60 + i * 30, 615);
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineWidht = 2;
+                ctx.stroke();
+                ctx.fillStyle = "brown";
+                ctx.fill();
+            }
+            //stepenice
+            ctx.beginPath();
+            ctx.fillStyle = "grey";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.stroke();
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.fillRect(45, 660, 720, 15);
+            ctx.strokeRect(45, 660, 720, 15);
+            ctx.fillRect(30, 675, 750, 15);
+            ctx.strokeRect(30, 675, 750, 15);
+        }
+    }
+</script>
+
+</html>

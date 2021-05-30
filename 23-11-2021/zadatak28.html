@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 27</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="800" height="640" style="border: 5px solid #ab13bf;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //pozadina
+            ctx.fillStyle = "blue";
+            ctx.fillRect(0, 0, 800, 640);
+            ctx.fill();
+
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+
+                    //beli krugovi
+                    ctx.beginPath()
+                    ctx.arc(80 + i * 160, 80 + j * 160, 80, 0, Math.PI * 2, true);
+                    ctx.fillStyle = "white";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+
+                    //sredisnja figura
+                    ctx.beginPath()
+                    ctx.moveTo(0 + i * 160, 80 + j * 160);
+                    ctx.arcTo(80 + i * 160, 80 + j * 160, 80 + i * 160, 0 + j * 160, 80);
+                    ctx.arcTo(80 + i * 160, 80 + j * 160, 160 + i * 160, 80 + j * 160, 80);
+                    ctx.arcTo(80 + i * 160, 80 + j * 160, 80 + i * 160, 160 + j * 160, 80);
+                    ctx.arcTo(80 + i * 160, 80 + j * 160, 0 + i * 160, 80 + j * 160, 80);
+                    ctx.fillStyle = "cyan";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpijski krugovi</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="880" height="440" style="border: 2px solid black;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            // plavi krug
+            ctx.beginPath();
+            ctx.arc(160, 160, 120, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+            //crni krug
+            ctx.beginPath();
+            ctx.arc(440, 160, 120, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+            //crveni krug
+            ctx.beginPath();
+            ctx.arc(720, 160, 120, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+            // narandzasti krug
+            ctx.beginPath();
+            ctx.arc(300, 280, 120, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "orange";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+
+            //zeleni krug
+            ctx.beginPath();
+            ctx.arc(580, 280, 120, 0, Math.PI * 2, true);
+            ctx.strokeStyle = "green";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+
+            // deo plavog kruga
+            ctx.beginPath();
+            ctx.arc(160, 160, 120, 100, Math.PI * 0.3, false);
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+            //deo crnog kruga
+            ctx.beginPath();
+            ctx.arc(440, 160, 120, 100, Math.PI * 0.6, false);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+            //deo crvenog kruga
+            ctx.beginPath();
+            ctx.arc(720, 160, 120, 0, Math.PI * 0.7, false);
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+            //deo zelenog kruga
+            ctx.beginPath();
+            ctx.arc(580, 280, 120, 20, Math.PI * 1.2, false);
+            ctx.strokeStyle = "green";
+            ctx.lineWidth = 20;
+            ctx.stroke();
+
+
+        }
+    }
+</script>
+
+</html>

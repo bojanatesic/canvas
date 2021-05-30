@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oko</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="500" height="400" style="border: 5px solid #ab13bf;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //kapak
+            ctx.beginPath();
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(250, 0, 450, 200);
+            ctx.quadraticCurveTo(250, 400, 50, 200);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.lineWidth = 4;
+            ctx.fillStyle = "#ebc696";
+            ctx.fill();
+            ctx.strokeStyle = "#ebc696";
+            ctx.stroke();
+
+                        //oko
+                        ctx.beginPath();
+            ctx.moveTo(50, 200);
+            ctx.quadraticCurveTo(250, 100, 450, 200);
+            ctx.quadraticCurveTo(250, 300, 50, 200);
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.lineWidth = 4;
+            ctx.fillStyle = "white";
+            ctx.fill();
+            ctx.strokeStyle = "white";
+            ctx.stroke();
+
+            //zenica
+
+            ctx.beginPath();
+ctx.arc(250,200,50,0, Math.PI * 2, true);
+ctx.fillStyle = "#5c3605";
+            ctx.fill();
+            ctx.strokeStyle = "#5c3605";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+
+            ctx.beginPath();
+ctx.arc(250,200,10,0, Math.PI * 2, true);
+ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+
+        }
+    }
+</script>
+
+</html>

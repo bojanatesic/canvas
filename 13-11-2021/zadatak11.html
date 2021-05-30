@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 9</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="640" height="520" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //pozadina
+            ctx.fillStyle = "#f0decc";
+            ctx.fillRect(40, 40, 540, 420);
+
+            //gore levo
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(20 + i * 120, 20 + j * 120);
+                    ctx.lineTo(60 + i * 120, 20 + j * 120);
+                    ctx.arcTo(80 + i * 120, 20 + j * 120, 80 + i * 120, 40 + j * 120, 20);
+                    ctx.lineTo(80 + i * 120, 60 + j * 120);
+                    ctx.lineTo(60 + i * 120, 60 + j * 120);
+                    ctx.lineTo(60 + i * 120, 80 + j * 120);
+                    ctx.lineTo(40 + i * 120, 80 + j * 120);
+                    ctx.arcTo(20 + i * 120, 80 + j * 120, 20 + i * 120, 60 + j * 120, 20);
+                    ctx.lineTo(20 + i * 120, 20 + j * 120);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "#e1a6e3";
+                    ctx.fill();
+                }
+            }
+
+            //gore desno
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(80 + i * 120, 40 + j * 120);
+                    ctx.arcTo(80 + i * 120, 20 + j * 120, 100 + i * 120, 20 + j * 120, 20);
+                    ctx.lineTo(140 + i * 120, 20 + j * 120);
+                    ctx.lineTo(140 + i * 120, 60 + j * 120);
+                    ctx.arcTo(140 + i * 120, 80 + j * 120, 120 + i * 120, 80 + j * 120, 20);
+                    ctx.lineTo(100 + i * 120, 80 + j * 120);
+                    ctx.lineTo(100 + i * 120, 60 + j * 120);
+                    ctx.lineTo(80 + i * 120, 60 + j * 120);
+                    ctx.lineTo(80 + i * 120, 40 + j * 120);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "#ede4a8";
+                    ctx.fill();
+                }
+            }
+
+            //dole levo
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(80 + i * 120, 120 + j * 120);
+                    ctx.arcTo(80 + i * 120, 140 + j * 120, 60 + i * 120, 140 + j * 120, 20);
+                    ctx.lineTo(20 + i * 120, 140 + j * 120);
+                    ctx.lineTo(20 + i * 120, 100 + j * 120);
+                    ctx.arcTo(20 + i * 120, 80 + j * 120, 40 + i * 120, 80 + j * 120, 20);
+                    ctx.lineTo(60 + i * 120, 80 + j * 120);
+                    ctx.lineTo(60 + i * 120, 100 + j * 120);
+                    ctx.lineTo(80 + i * 120, 100 + j * 120);
+                    ctx.lineTo(80 + i * 120, 120 + j * 120);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "#bcf5db";
+                    ctx.fill();
+                }
+            }
+
+            //dole desno
+            for (i = 0; i < 5; i++) {
+                for (j = 0; j < 4; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(120 + i * 120, 80 + j * 120);
+                    ctx.arcTo(140 + i * 120, 80 + j * 120, 140 + i * 120, 100 + j * 120, 20);
+                    ctx.lineTo(140 + i * 120, 140 + j * 120);
+                    ctx.lineTo(100 + i * 120, 140 + j * 120);
+                    ctx.arcTo(80 + i * 120, 140 + j * 120, 80 + i * 120, 120 + j * 120, 20);
+                    ctx.lineTo(80 + i * 120, 100 + j * 120);
+                    ctx.lineTo(100 + i * 120, 100 + j * 120);
+                    ctx.lineTo(100 + i * 120, 80 + j * 120);
+                    ctx.lineTo(120 + i * 120, 80 + j * 120);
+                    ctx.lineCap = "round";
+                    ctx.lineJoin = "round";
+                    ctx.strokeStyle = "black";
+                    ctx.lineWidht = 2;
+                    ctx.stroke();
+                    ctx.fillStyle = "#a8bced";
+                    ctx.fill();
+                }
+            }
+        }
+    }
+</script>
+
+</html>

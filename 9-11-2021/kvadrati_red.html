@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvadrati</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="850" height="150" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            for (i = 0; i < 8; i++) {
+                ctx.beginPath();
+                ctx.fillStyle = "magenta";
+                ctx.fill();
+                ctx.strokeStyle = "yellow";
+                ctx.lineWidth = 5;
+                ctx.stroke();
+                ctx.strokeRect(50 + i * 100, 50, 50, 50);
+                ctx.fillRect(50 + i * 100, 50, 50, 50);
+            }
+        }
+    }
+</script>
+
+</html>

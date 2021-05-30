@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadatak 18</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="920" height="730" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            ctx.beginPath();
+            ctx.moveTo(20 , 60 );
+            ctx.lineTo(60, 20 );
+            ctx.lineTo(60,240);
+            ctx.lineTo(160, 240 );
+            ctx.lineTo(160, 100);
+            ctx.lineTo(100, 100 );
+            ctx.lineTo(100, 60);
+            ctx.lineTo(200, 60);
+            ctx.lineTo(200, 280);
+            ctx.lineTo(20, 280);
+            ctx.lineTo(20, 60);
+            ctx.moveTo(160 , 100 );
+            ctx.lineTo(200, 60 );
+            ctx.fillStyle = "#223a61";
+            ctx.fill();
+            ctx.strokeStyle = "green";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(60 , 20 );
+            ctx.lineTo(240, 20 );
+            ctx.lineTo(240,240);
+            ctx.lineTo(200, 280 );
+            ctx.lineTo(200, 60);
+            ctx.lineTo(100, 60 );
+            ctx.lineTo(100, 200);
+            ctx.lineTo(160, 200);
+            ctx.lineTo(160, 240);
+            ctx.lineTo(60, 240);
+            ctx.lineTo(60, 20);
+            ctx.moveTo(60 , 240 );
+            ctx.lineTo(100, 200 );
+            ctx.fillStyle = "#385e9c";
+            ctx.fill();
+            ctx.strokeStyle = "green";
+            ctx.stroke();
+        }
+    }
+</script>
+
+</html>

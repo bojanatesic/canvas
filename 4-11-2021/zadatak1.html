@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 1</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="600" height="300" style="border:3px solid #000000"></canvas>
+
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+        }
+        //crveni pravougaonik
+        ctx.fillStyle = "red";
+        // ctx.fill();
+        ctx.fillRect(0, 0, 300, 150);
+
+        //zeleni pravougaonik
+        ctx.fillStyle = "green";
+        // ctx.fill();
+        ctx.fillRect(300, 0, 300, 150);
+
+        //plavi pravougaonik
+        ctx.fillStyle = "blue";
+        // ctx.fill();
+        ctx.fillRect(0, 150, 300, 150);
+
+        //zuti pravougaonik
+        ctx.fillStyle = "yellow";
+        // ctx.fill();
+        ctx.fillRect(300, 150, 300, 150);
+
+        //maroon pravougaonik
+        ctx.fillStyle = "maroon";
+        // ctx.fill();
+        ctx.fillRect(125, 35, 50, 80);
+
+        //aqua pravougaonik
+        ctx.fillStyle = "aqua";
+        // ctx.fill();
+        ctx.fillRect(125, 185, 50, 80);
+
+        //lime pravougaonik
+        ctx.fillStyle = "lime";
+        // ctx.fill();
+        ctx.fillRect(425, 35, 50, 80);
+
+        //teal pravougaonik
+        ctx.fillStyle = "teal";
+        // ctx.fill();
+        ctx.fillRect(425, 185, 50, 80);
+
+        //sredina
+        ctx.fillStyle = "black";
+        // ctx.fill();
+        ctx.fillRect(250, 100, 100, 100);
+        ctx.clearRect(260, 110, 80, 80);
+        ctx.fillRect(270, 120, 60, 60);
+        ctx.clearRect(280, 130, 40, 40);
+        ctx.fillRect(290, 140, 20, 20);
+    }
+</script>
+
+</html>

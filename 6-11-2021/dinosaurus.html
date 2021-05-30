@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaurus</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="340" height="300" style="border: 2px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            ctx.beginPath();
+            ctx.moveTo(60, 20);
+            ctx.lineTo(160, 20);
+            ctx.arcTo(200, 20, 200, 60, 40);
+            ctx.lineTo(200, 140);
+            ctx.arcTo(200, 200, 260, 200, 60);
+            ctx.lineTo(300, 200);
+            ctx.arcTo(320, 200, 320, 220, 20);
+            ctx.lineTo(320, 260);
+            ctx.arcTo(320, 280, 300, 280, 20);
+            ctx.lineTo(140, 280);
+            ctx.arcTo(100, 280, 100, 240, 40);
+            ctx.lineTo(100, 160);
+            ctx.arcTo(100, 140, 80, 140, 20);
+            ctx.lineTo(60, 140);
+            ctx.arcTo(20, 140, 20, 100, 40);
+            ctx.lineTo(20, 60);
+            ctx.arcTo(20, 20, 60, 20, 40);
+            ctx.closePath();
+            ctx.fillStyle = "aqua";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(80, 60, 5, 0, Math.PI * 2, true);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+
+            // tuzan dinosaurus
+            // ctx.beginPath();
+            // ctx.moveTo(20, 100);
+            // ctx.lineTo(80, 100);
+            // ctx.stroke();
+            // ctx.closePath();
+
+            // srecan dinosaurus
+            ctx.beginPath();
+            ctx.moveTo(40, 120);
+            ctx.arcTo(60, 120, 60, 100, 20);
+            ctx.stroke();
+            ctx.closePath();
+
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadatak 19</title>
+</head>
+
+<body onload="draw();">
+    <canvas id="canvas" width="920" height="730" style="border: 5px solid plum;"></canvas>
+</body>
+<script type="text/javascript">
+    const draw = () => {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            for (j = 0; j < 2; j++) {
+                ctx.beginPath();
+                ctx.moveTo(20, 40 + j * 80);
+                ctx.lineTo(40, 20 + j * 80);
+                ctx.lineTo(60, 40 + j * 80);
+                ctx.lineTo(40, 60 + j * 80);
+                ctx.lineTo(20, 40 + j * 80);
+                ctx.fillStyle = "#223a61";
+                ctx.fill();
+                ctx.strokeStyle = "green";
+                ctx.stroke();
+            }
+            for (j = 0; j < 2; j++) {
+                ctx.beginPath();
+                ctx.moveTo(220, 80 + j * 80);
+                ctx.lineTo(240, 60 + j * 80);
+                ctx.lineTo(260, 80 + j * 80);
+                ctx.lineTo(240, 100 + j * 80);
+                ctx.lineTo(220, 80 + j * 80);
+                ctx.fillStyle = "#223a61";
+                ctx.fill();
+                ctx.strokeStyle = "green";
+                ctx.stroke();
+            }
+
+            for (i = 0; i < 2; i++) {
+                for (j = 0; j < 2; j++) {
+                    ctx.beginPath();
+                    ctx.moveTo(60 + i * 80, 80 + j * 80);
+                    ctx.lineTo(120 + i * 80, 20 + j * 80);
+                    ctx.lineTo(140 + i * 80, 40 + j * 80);
+                    ctx.lineTo(80 + i * 80, 100 + j * 80);
+                    ctx.lineTo(60 + i * 80, 80 + j * 80);
+                    ctx.fillStyle = "#223a61";
+                    ctx.fill();
+                    ctx.strokeStyle = "green";
+                    ctx.stroke();
+                }
+            }
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.moveTo(40 + i * 80, 20);
+                ctx.lineTo(80 + i * 80, 20);
+                ctx.lineTo(100 + i * 80, 40);
+                ctx.lineTo(80 + i * 80, 60);
+                ctx.lineTo(40 + i * 80, 20);
+                ctx.fillStyle = "#b24bd6";
+                ctx.fill();
+                ctx.strokeStyle = "green";
+                ctx.stroke();
+            }
+            ctx.beginPath();
+            ctx.moveTo(200, 20);
+            ctx.lineTo(240, 20);
+            ctx.lineTo(260, 40);
+            ctx.lineTo(260, 80);
+            ctx.lineTo(200, 20);
+
+            ctx.moveTo(20, 40);
+            ctx.lineTo(100, 120);
+            ctx.lineTo(80, 140);
+            ctx.lineTo(20, 80);
+            ctx.lineTo(20, 40);
+
+            ctx.moveTo(100, 80);
+            ctx.lineTo(120, 60);
+            ctx.lineTo(180, 120);
+            ctx.lineTo(160, 140);
+            ctx.lineTo(100, 80);
+
+            ctx.moveTo(180, 80);
+            ctx.lineTo(200, 60);
+            ctx.lineTo(260, 120);
+            ctx.lineTo(260, 160);
+            ctx.lineTo(180, 80);
+
+            ctx.moveTo(20, 120);
+            ctx.lineTo(80, 180);
+            ctx.lineTo(40, 180);
+            ctx.lineTo(20, 160);
+            ctx.lineTo(20, 120);
+            ctx.fillStyle = "#b24bd6";
+            ctx.fill();
+            ctx.strokeStyle = "green";
+            ctx.stroke();
+            for (i = 0; i < 2; i++) {
+                ctx.beginPath();
+                ctx.moveTo(100 + i * 80, 160);
+                ctx.lineTo(120 + i * 80, 140);
+                ctx.lineTo(160 + i * 80, 180);
+                ctx.lineTo(120 + i * 80, 180);
+                ctx.lineTo(100 + i * 80, 160);
+                ctx.fillStyle = "#b24bd6";
+                ctx.fill();
+                ctx.strokeStyle = "green";
+                ctx.stroke();
+            }
+
+        }
+    }
+</script>
+
+</html>
